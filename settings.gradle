@@ -1,0 +1,6 @@
+rootProject.name = 'jd.homework.1.4.1.Gradle.MultiModules'
+include 'db'
+include 'api'
+include 'service'
+
+

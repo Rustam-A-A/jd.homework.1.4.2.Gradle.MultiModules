@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+def junitVersion = '5.7.1'
+group 'ru.netology'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine: $junitVersion"
+}
+
+test {
+    useJUnitPlatform()
+}

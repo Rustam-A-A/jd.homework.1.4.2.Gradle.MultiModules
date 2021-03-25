@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+
+
+group 'ru.netology'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+def junitVersion = '5.7.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    manifest{
+      //  attributes 'Main-Class':'/Users/rustam/IdeaProjects/Maven.MultiModules/gradleExample/build/classes/java/main/App'
+       attributes 'Main-Class':'ru.netology.Main'
+
+    }
+}
